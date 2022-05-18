@@ -1,13 +1,16 @@
 import * as React from "react";
 import {Card, CardMedia,
     CardContent, CardActions, Button, 
-    Typography, Chip, List, ListSubheader, ListItem, ListItemIcon, ListItemText, Divider } from '@mui/material'
+    Typography, Chip, List, ListSubheader, ListItem, 
+    ListItemIcon, ListItemText, Divider, IconButton } from '@mui/material'
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import KingBedIcon from '@mui/icons-material/KingBed';
 import BathtubIcon from '@mui/icons-material/Bathtub';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import CropIcon from '@mui/icons-material/Crop';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
 
 function SingleListing(props){
     const data = props.data;
@@ -72,9 +75,13 @@ function SingleListing(props){
                     </ListItem> */}
                 </List>
                 </CardContent>
-                <CardActions>
-                    <Button size="small">Share</Button>
-                    <Button size="small">Learn More</Button>
+                <CardActions disableSpacing>
+                    <IconButton aria-label="add to favorites">
+                        <FavoriteIcon />
+                    </IconButton>
+                    <IconButton aria-label="share">
+                        <ShareIcon />
+                    </IconButton>
                 </CardActions>
             </Card>
             
