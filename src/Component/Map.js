@@ -29,7 +29,8 @@ export default function MyMapComponent(props) {
             // console.log("lat ", parseFloat(val.latitude), " Lng ", parseFloat(val.longitude))
             let m = new window.google.maps.Marker({
                 position: {lat: parseFloat(val.latitude), lng:parseFloat(val.longitude)},
-                map
+                map,
+                icon: "/assets/img/map-marker1.ico",
             });
 
             bounds.extend(m.getPosition());
