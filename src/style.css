@@ -6,4 +6,6 @@
     height: 100vh;
     overflow-y: scroll;
     box-shadow: 0 0.125rem 0.3125rem rgb(0 0 0 / 10%);
+    transition: all .2s linear 1s;
+    scroll-behavior: smooth;
 }

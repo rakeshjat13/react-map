@@ -1,5 +1,5 @@
 import React,{useRef, useEffect, useState } from "react";
-
+import {scrollToDiv} from "../core/common"
 
 export default function MyMapComponent(props) {
     // console.log("props map", props.LocationArr)
@@ -30,8 +30,15 @@ export default function MyMapComponent(props) {
             let m = new window.google.maps.Marker({
                 position: {lat: parseFloat(val.latitude), lng:parseFloat(val.longitude)},
                 map,
-                icon: "/assets/img/map-marker1.ico",
+                icon: "/assets/img/marker.png",
+                detail: val
             });
+            console.log("marker", m);
+            m.addListener("mouseover", (mObj) => {
+                console.log("mobj", mObj);
+                props.fun('markerRef', mObj);
+                scrollToDiv(`single-${m.detail.id}`)
+            })
 
             bounds.extend(m.getPosition());
         })

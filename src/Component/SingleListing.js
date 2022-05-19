@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useRef} from "react";
 import {Card, CardMedia,
     CardContent, CardActions, Button, 
     Typography, Chip, List, ListSubheader, ListItem, 
@@ -14,9 +14,16 @@ import ShareIcon from '@mui/icons-material/Share';
 
 function SingleListing(props){
     const data = props.data;
+    const listRef = useRef();
+
+    const checkData = (ob) => {
+        console.log("ob", ob);
+        console.log("ref ob", listRef);
+    }
+
     return(
         
-            <Card sx={{ marginTop:'15px', width:'100%'}}>
+            <Card sx={{ marginTop:'15px', width:'100%'}} ref={listRef} onMouseEnter={checkData} id={`single-${data.id}`} >
                 <CardMedia
                     component="img"
                     height="180"
