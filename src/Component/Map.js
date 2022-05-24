@@ -23,21 +23,29 @@ export default function MyMapComponent(props) {
     }, [ref, map]);
 
     const bounds = new window.google.maps.LatLngBounds();
-
+    const deactiveMarkerImg = "/assets/img/marker.png";
+    const activeMarkerImg = "/assets/img/active-marker.png";
     function createSingleMarker(){
         LocationArr.map((val) => {
             // console.log("lat ", parseFloat(val.latitude), " Lng ", parseFloat(val.longitude))
             let m = new window.google.maps.Marker({
                 position: {lat: parseFloat(val.latitude), lng:parseFloat(val.longitude)},
                 map,
-                icon: "/assets/img/marker.png",
-                detail: val
+                icon: deactiveMarkerImg,
+                detail: val,
+                title: val.title,
+                markerID:val.id
             });
             console.log("marker", m);
             m.addListener("mouseover", (mObj) => {
                 console.log("mobj", mObj);
                 props.fun('markerRef', mObj);
                 scrollToDiv(`single-${m.detail.id}`)
+                m.setIcon(activeMarkerImg);
+            })
+
+            m.addListener("mouseout", () => {
+                m.setIcon(deactiveMarkerImg);
             })
 
             bounds.extend(m.getPosition());
