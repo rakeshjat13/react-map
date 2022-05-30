@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import reportWebVitals from './reportWebVitals';
-import Main from './Component/Main';
+import Routes from './Routes';
+import {BrowserRouter} from "react-router-dom"
 
 const root = ReactDOM.createRoot(document.getElementById('mymap'));
 root.render(
-  <React.StrictMode>
-    <Main />
-  </React.StrictMode>
+  <BrowserRouter>
+    <Routes />
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

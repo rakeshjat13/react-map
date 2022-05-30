@@ -177,11 +177,17 @@
       "id": 11,
       "title": "High Side Resort",
       "price": 250200,
+      "status": 2,
       "marker_image": "/assets/img/img-item-thumb-11.jpg",
       "url": "detail-01.html",
       "address": "558 Ellery Street, Bellamy",
       "latitude": "40.666595078439435",
-      "longitude": "-73.69442859362795"
+      "longitude": "-73.69442859362795",
+      "badge": "Sale",
+      "area": 1850,
+      "bedrooms": 5,
+      "bathrooms": 3,
+      "rooms": 10
     },
     {
       "id": 12,

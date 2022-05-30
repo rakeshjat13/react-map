@@ -17,34 +17,17 @@ class Main extends React.Component{
                 markerRef: null
             };
             // this.increase=this.increase.bind(this);
-        this.el1 = React.createRef();
-        this.el2 = React.createRef();
-        console.log("listing", LocationArr);
-        this.testData = this.testData.bind(this);
+        // console.log("listing", LocationArr);
 	}
 
-    testData(d,e) {
-        console.log("test", e);
-        console.log("this state", this.state)
-        console.log("current main Ref", this.el1, this.el2)
-        this.setState(() => { this.state[d]  =  e });
-    }
-
-    componentDidMount() {
-        console.log("main ref",this.el2.current);
-      }
 
 	render(){
 		return (
             <Grid container>
-                <Grid item xs={12} sm={6} md={7} sx={{height:'100vh'}}>
-                    {/* <Paper>xs=8</Paper> */}
-                    <MyMapComponent LocationArr={LocationArr} fun={this.testData} refernce={this.el2.current}/>
-                </Grid>
-                <Grid item xs={12} sm={6} md={5} className="listing-main">
+                <Grid item xs={12} sm={6} md={4} className="listing-main">
                     <Box sx={{m:3}}>
                         {/* <Paper className="myBG1">xs=5</Paper> */}
-                        <Listing LocationArr={LocationArr} ref={this.el2}/>
+                        <Listing LocationArr={LocationArr} />
                         <Paper sx={{my: 1, mx: 'auto', p: 2}}>
                             <Grid container wrap="nowrap" spacing={2}>
                                 <Grid item>
@@ -56,6 +39,10 @@ class Main extends React.Component{
                             </Grid>
                         </Paper>
                     </Box>
+                </Grid>
+                <Grid item xs={12} sm={6} md={8} sx={{height:'100vh'}}>
+                    {/* <Paper>xs=8</Paper> */}
+                    <MyMapComponent LocationArr={LocationArr} />
                 </Grid>
             </Grid>
 		)

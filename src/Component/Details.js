@@ -13,35 +13,20 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 
 import { useNavigate } from "react-router-dom";
-import Skeleton from '@mui/material/Skeleton';
 
-function SingleListing(props){
+function Details(props){
     const data = props.data;
-    const listRef = useRef();
-    const navigate = useNavigate();
 
-    const checkData = (ob) => {
-        // console.log("ob", ob);
-        // console.log("ref ob", listRef);
-    }
 
-    const clickListener = (obj) =>{
-        console.log("navigate", navigate)
-        console.log("props---", props);
-
-        navigate('/detail', {state:props.data});
-
-    }
     return(
         
-            <Card sx={{ marginTop:'15px', width:'100%'}} ref={listRef} onMouseEnter={checkData} id={`single-${data.id}`} onClick={clickListener}>
-                {data['marker_image'] ? (<CardMedia
+            <Card sx={{ marginTop:'15px', width:'100%'}} id={`single-${data.id}`} >
+                <CardMedia
                     component="img"
                     height="180"
                     image={data['marker_image']}
                     alt="green iguana"
-                />) : (<Skeleton variant="rectangular" width="100%" height={180} />)}
-            
+                />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                     {data.title}
@@ -107,4 +92,4 @@ function SingleListing(props){
     )
 }
 
-export default SingleListing
+export default Details

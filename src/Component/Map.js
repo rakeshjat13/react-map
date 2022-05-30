@@ -5,12 +5,11 @@ export default function MyMapComponent(props) {
     // console.log("props map", props.LocationArr)
     const LocationArr = props.LocationArr;
     const ref = useRef(null);
-    console.log("ref", ref);
     const [map, setMap] = useState();
     const LatLng = {lat: -23.6993287, lng:133.8691865};
         var mapOptions = {
             center: LatLng,
-            zoom: 5
+            // zoom: 5
         };
     useEffect(() => {
         if (ref.current && !map) {
@@ -36,10 +35,9 @@ export default function MyMapComponent(props) {
                 title: val.title,
                 markerID:val.id
             });
-            console.log("marker", m);
+            // console.log("marker", m);
             m.addListener("mouseover", (mObj) => {
                 console.log("mobj", mObj);
-                props.fun('markerRef', mObj);
                 scrollToDiv(`single-${m.detail.id}`)
                 m.setIcon(activeMarkerImg);
             })

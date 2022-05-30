@@ -5,9 +5,12 @@ import {scrollToDiv} from "../core/common";
 
 function Listing(props){
     const LocationArr = props.LocationArr;
-    console.log("LocationArr", LocationArr);
-    console.log("props listing", props)
+    // console.log("LocationArr", LocationArr);
+    // console.log("props listing", props)
     // const divRef = useRef(null);
+    const clickListHandeler = () => {
+        console.log("this", this);
+    }
     return (
         <Box sx={{marginTop:5}}>
             <Typography variant="h5" gutterBottom component="div">All Listing</Typography>
@@ -18,7 +21,7 @@ function Listing(props){
                 alignItems="baseline"
                 
             >   
-            { LocationArr.map((data, key) => <SingleListing key={key} data={data} id={`single-${key}`} />)}
+            { LocationArr.map((data, key) => <SingleListing key={key} data={data} id={`single-${key}`}  onClick={clickListHandeler}/>)}
                 
             </Grid>
         </Box>
