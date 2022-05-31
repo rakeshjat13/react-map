@@ -11,7 +11,7 @@ import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import CropIcon from '@mui/icons-material/Crop';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
-
+import Slider from "./Slider";
 import { useNavigate } from "react-router-dom";
 
 function Details(props){
@@ -78,6 +78,7 @@ function Details(props){
                         />
                     </ListItem> */}
                 </List>
+                <Slider />
                 </CardContent>
                 <CardActions disableSpacing>
                     <IconButton aria-label="add to favorites">

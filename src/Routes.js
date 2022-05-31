@@ -13,6 +13,10 @@ export default function Routes(){
         {
             path:'detail',
             element: <ListDetails />
+        },
+        {
+            path:'test',
+            element:'<h3>Test page loading here...</h3>'
         }
     ]);
 }

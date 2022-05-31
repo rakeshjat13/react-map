@@ -26,12 +26,12 @@ function ListDetails (props){
                         </Button>
                     </Box>
                     <Details  data={data.state}/>
-                    <Box>
+                    {/* <Box>
                     <Typography variant="h6" gutterBottom component="div">
                         h6. Heading
                     </Typography>
                     <Slidder />
-                    </Box>
+                    </Box> */}
                     {/* <Paper sx={{my: 1, mx: 'auto', p: 2}}>
                         <Grid container wrap="nowrap" spacing={2}>
                             <Grid item>
