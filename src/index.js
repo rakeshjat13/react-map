@@ -4,12 +4,16 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 import Routes from './Routes';
+import { Provider } from "react-redux";
 import {BrowserRouter} from "react-router-dom"
+import configRotateStore from "./Component/Redux/Store";
 
 const root = ReactDOM.createRoot(document.getElementById('mymap'));
 root.render(
   <BrowserRouter>
+  <Provider store={configRotateStore()}>
     <Routes />
+    </Provider>
   </BrowserRouter>
 );
 
