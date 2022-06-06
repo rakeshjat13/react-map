@@ -2,7 +2,7 @@ import { createStore } from "redux";
 import rotateReducer from "./Reducer";
 
 
-function configRotateStore (state = {start:false, btnStyle:''}){
+function configRotateStore (state = {start:false, cartVal: []}){
     return createStore(rotateReducer, state)
 }
 

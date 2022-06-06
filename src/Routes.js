@@ -3,6 +3,9 @@ import { useRoutes } from "react-router-dom";
 import Main from "./Component/Main";
 import ListDetails from "./Component/ListDetails";
 import App from "./App";
+import MyProducts from "./Component/demo/Products";
+import Demo from "./Component/demo/Demo";
+
 
 export default function Routes(){
     return useRoutes([
@@ -17,6 +20,10 @@ export default function Routes(){
         {
             path:'test',
             element:<App />
+        },
+        {
+            path:'demo',
+            element: <Demo />
         }
     ]);
 }

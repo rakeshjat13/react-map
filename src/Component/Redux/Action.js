@@ -14,7 +14,23 @@ export const rotateAction = (start) => {
 
 
 export const changeBtnStyle = () => {
-    return { type:'changeBtnStyle', 
-            padding: '15px'
-        }
+    console.log("action call changeBtnstyle");
+    return { type:'PausedRotate', 
+            start: false
+    }
+}
+
+export const addToCart = (data) => {
+    console.log("add to cart", data);
+    return {
+        type: 'add_to_cart',
+        cartVal:data
+    }
+}
+
+export const removeToCart = () => {
+    console.log("call removet cart action");
+    return {
+        type: 'remove_to_cart',
+    }   
 }
