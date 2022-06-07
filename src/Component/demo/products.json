@@ -1,24 +1,35 @@
 [
     {
+
+        "id" : 1,
         "name" : "Rockarz Bluetooth Earphone",
         "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTcAz5c14T3ntEEumMBGB5JmJ3d8Mfe6B6Lw&usqp=CAU",
         "price" : 1399
     },{
+        "id" : 2,
         "name" : "Inspiron 15 5510 Dell Laptop",
         "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa6rx19v83-Iq8cK1stsJw6BJt1eXisjpKAA&usqp=CAU",
         "price" : 67599
     },
     {
+        "id" : 3,
         "name" : "realme Smart TV - 43 Inches",
         "image" : "https://image01.realme.net/general/20200630/1593487442773.jpg",
         "price" : 22999
     },{
+        "id" : 4,
         "name" : "Refrigerator 260",
         "image" : "https://static3.depositphotos.com/1000749/116/v/450/depositphotos_1161071-stock-illustration-refrigerator.jpg",
         "price" : 35699
     },{
+        "id" : 5,
         "name" : "Music system - Home Theater",
         "image" : "https://cdn.mos.cms.futurecdn.net/Skf5Q5jtfd2vZzQkifhC9K.jpg",
         "price" : 7999
+    },{
+        "id" : 6,
+        "name" : "Apple iPhone 13 - Red Color",
+        "image" : "https://raatita.com/wp-content/uploads/2022/03/71gm8v4uPBL._SX522_.jpg",
+        "price" : 86750
     }
 ]

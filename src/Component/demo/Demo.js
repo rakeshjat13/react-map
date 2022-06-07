@@ -1,13 +1,13 @@
 import { Container } from '@mui/material'
 import React from 'react'
-import Cart from './Cart'
+import Header from './Header'
 import MyProducts from './Products'
 
 
 export default function Demo() {
   return (
     <>
-        <Cart />
+        <Header />
         <Container>
             <MyProducts />
         </Container>

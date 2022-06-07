@@ -14,7 +14,10 @@ export default (state, action) => {
             break;
         case 'remove_to_cart': 
             console.log("remove_to_cart action", action,'---> state ', state)
-            state.cartVal.pop();
+            let i = state.cartVal.indexOf(action.productId);
+            console.log("product index", i);
+            if(i >= 0)
+                state.cartVal.splice(i, 1)
             return {...state, cartVal:[...state.cartVal]} 
             break;
         default:

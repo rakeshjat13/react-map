@@ -5,6 +5,7 @@ import ListDetails from "./Component/ListDetails";
 import App from "./App";
 import MyProducts from "./Component/demo/Products";
 import Demo from "./Component/demo/Demo";
+import Cart from "./Component/demo/Cart";
 
 
 export default function Routes(){
@@ -24,6 +25,9 @@ export default function Routes(){
         {
             path:'demo',
             element: <Demo />
+        },{
+            path:'cart',
+            element: <Cart />
         }
     ]);
 }

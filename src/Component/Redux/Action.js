@@ -28,9 +28,10 @@ export const addToCart = (data) => {
     }
 }
 
-export const removeToCart = () => {
+export const removeToCart = (id) => {
     console.log("call removet cart action");
     return {
         type: 'remove_to_cart',
+        productId:id
     }   
 }
