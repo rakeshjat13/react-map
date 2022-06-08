@@ -1,47 +1,111 @@
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import SkipNextIcon from '@mui/icons-material/SkipNext';
+import {Typography, Paper, List, ListItem, ListItemAvatar, ListItemText, Divider, Avatar, ListItemIcon} from "@mui/material";
+import InboxIcon from "@mui/icons-material/Inbox";
+import DraftsIcon from "@mui/icons-material/Drafts";
+import CircleIcon from '@mui/icons-material/Circle';
+
 
 export default function CartDetail() {
     const theme = useTheme();
-  return (
-    <Card sx={{ display: 'flex' }}>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography component="div" variant="h5">
-            Live From Space
-          </Typography>
-          <Typography variant="subtitle1" color="text.secondary" component="div">
-            Mac Miller
-          </Typography>
-        </CardContent>
-        <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-          <IconButton aria-label="previous">
-            {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
-          </IconButton>
-          <IconButton aria-label="play/pause">
-            <PlayArrowIcon sx={{ height: 38, width: 38 }} />
-          </IconButton>
-          <IconButton aria-label="next">
-            {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
-          </IconButton>
-        </Box>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 151 }}
-        image="/static/images/cards/live-from-space.jpg"
-        alt="Live from space album cover"
-      />
-    </Card>
+  return (<>
+      <Typography component="div" variant="h5">
+           Your Cart Details
+      </Typography>
+    <Paper sx={{marginTop:2}}>
+    <List sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper' }}>
+      <ListItem alignItems="flex-start">
+        <ListItemAvatar>
+          <Avatar sx={{ width: 165, height: 165 }} alt="Remy Sharp" src="./assets/img/apple-iphone-13.jpg" />
+        </ListItemAvatar>
+        <ListItemText
+          primary={
+            <Typography variant="h5">Apple iPhone 13</Typography>
+          }
+          secondary={
+            <React.Fragment>
+              <Typography
+                sx={{ display: 'inline' }}
+                component="span"
+                variant="body2"
+                color="text.primary"
+              >
+                Ali Connors
+              </Typography>
+              {<List>
+          <ListItem disablePadding>
+            
+              {/* <ListItemIcon sx={{maxWidth:'20px'}}>
+                <CircleIcon sx={{ fontSize: 9, maxWidth:'20px' }} />
+              </ListItemIcon> */}
+              <CircleIcon sx={{ fontSize: 9, paddingRight:'15px' }} />
+              <ListItemText primary="6 GB RAM | 128 GB ROM | Expandable Upto 1 TB" />
+        
+          </ListItem>
+          <ListItem disablePadding>
+           
+              {/* <ListItemIcon>
+                <CircleIcon sx={{ fontSize: 9, maxWidth:'20px' }} />
+              </ListItemIcon> */}
+              <CircleIcon sx={{ fontSize: 9, paddingRight:'15px' }} />
+              <ListItemText primary="16.51 cm (6.5 inch) Full HD+ Display" />
+        
+          </ListItem>
+        </List>}
+            </React.Fragment>
+          }
+        />
+
+        <ListItemText primary={<Typography variant="h5">₹86,999</Typography>} />
+      </ListItem>
+      <Divider variant="inset" component="li" />
+      <ListItem alignItems="flex-start">
+        <ListItemAvatar>
+          <Avatar sx={{ width: 165, height: 165 }} alt="Remy Sharp" src="./assets/img/apple-iphone-13.jpg" />
+        </ListItemAvatar>
+        <ListItemText
+          primary={
+            <Typography variant="h5">Apple iPhone 13</Typography>
+          }
+          secondary={
+            <React.Fragment>
+              <Typography
+                sx={{ display: 'inline' }}
+                component="span"
+                variant="body2"
+                color="text.primary"
+              >
+                Ali Connors
+              </Typography>
+              {<List>
+          <ListItem disablePadding>
+            
+              {/* <ListItemIcon sx={{maxWidth:'20px'}}>
+                <CircleIcon sx={{ fontSize: 9, maxWidth:'20px' }} />
+              </ListItemIcon> */}
+              <CircleIcon sx={{ fontSize: 9, paddingRight:'15px' }} />
+              <ListItemText primary="6 GB RAM | 128 GB ROM | Expandable Upto 1 TB" />
+        
+          </ListItem>
+          <ListItem disablePadding>
+           
+              {/* <ListItemIcon>
+                <CircleIcon sx={{ fontSize: 9, maxWidth:'20px' }} />
+              </ListItemIcon> */}
+              <CircleIcon sx={{ fontSize: 9, paddingRight:'15px' }} />
+              <ListItemText primary="16.51 cm (6.5 inch) Full HD+ Display" />
+        
+          </ListItem>
+        </List>}
+            </React.Fragment>
+          }
+        />
+
+        <ListItemText primary={<Typography variant="h5">₹86,999</Typography>} />
+      </ListItem>
+    </List>
+    </Paper>
+    </>
   )
 }
 

@@ -37,7 +37,7 @@ const Cart = (props) => {
   return (
     <>
       <Header />
-      <Container>
+      <Container sx={{marginTop:'45px'}}>
         <CartDetail />
       </Container>
     </>
