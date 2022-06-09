@@ -4,32 +4,44 @@
         "id" : 1,
         "name" : "Rockarz Bluetooth Earphone",
         "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTcAz5c14T3ntEEumMBGB5JmJ3d8Mfe6B6Lw&usqp=CAU",
-        "price" : 1399
+        "price" : 1399,
+        "description": "Plug Into Nirvana on your boAt Rockerz 255F Pro that comes equipped with the latest Bluetooth v5.0 QCC3003 chipset. cVc technology ensures you a seamless calling experience. The Bluetooth headset offers Fast Charging Technology meaning you can fully charge it in only 1 hour. It offers a playtime of up to 10 hours with its powerful battery for an extended immersive experience. It is IPX5 rated to offer protection against sweat and water scaresR",
+        "specification": ["With Mic:Yes","Bluetooth version: 5", "Wireless range: 10 m", "Fast Charge: 20 mins charge= 4 hours playtime", "Magnetic Lock","IPX5: Water and Sweat Resistant"]
     },{
         "id" : 2,
         "name" : "Inspiron 15 5510 Dell Laptop",
         "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa6rx19v83-Iq8cK1stsJw6BJt1eXisjpKAA&usqp=CAU",
-        "price" : 67599
+        "price" : 67599,
+        "description": "This Dell laptop is all geared up to keep you productive and entertained with its innovative features and stylish design. It's equipped with dual speakers with nahimic 3D Audio for Gamers so that you can hear every sound so that no enemy (in the game) can get past you. The Game Shift technology produces a turbo boost of power so that you can unleash your gaming power when the game gets intense. And, with a long-lasting battery, you can enjoy gaming without sitting close to the charger and charging point.",
+        "specification": ["NVIDIA GeForce GTX 1650","15.6 inches Full HD WVA AG Narrow Border Display (250 nits Brightness)", "Pre-installed Genuine Windows 10 OS", "Preloaded with MS Office","Intel Core i5 Processor (10th Gen)", "16 GB DDR4 RAM", "64 bit Windows 10 Operating System","512 GB SSD"]
     },
     {
         "id" : 3,
         "name" : "realme Smart TV - 43 Inches",
         "image" : "https://image01.realme.net/general/20200630/1593487442773.jpg",
-        "price" : 22999
+        "price" : 22999,
+        "description": "Bring home this TV from realme and experience the stunning visuals that result from its Chroma Boost Picture Engine. Boasting a Bezel-less design and Dolby Surround Audio, this Android TV blends right into your decor and offers you audio performance that makes your favourite TV shows, movies, and other video content all the more enjoyable.",
+        "specification" : ["Supported Apps: Netflix|Prime Video|Disney+Hotstar|Youtube","Operating System: Android (Google Assistant & Chromecast in-built)", "Resolution: HD Ready 1366 x 768 Pixels", "Sound Output: 24 W","Refresh Rate: 60 Hz"]
     },{
         "id" : 4,
         "name" : "Refrigerator 260",
         "image" : "https://static3.depositphotos.com/1000749/116/v/450/depositphotos_1161071-stock-illustration-refrigerator.jpg",
-        "price" : 35699
+        "price" : 35699,
+        "description": "You can save energy and ensure low operation noise with the LG 260 L Frost-free Refrigerator, which features Smart Inverter technology. Its LG Door Cooling+ technology ensures that this refrigerator is evenly cooled on the inside as well as at the door for keeping your food fresh. Moreover, with Smart Diagnosis in this refrigerator, you can call the customer care helpline, place your smartphone on the appliance, and quickly diagnose the issue.",
+        "specification" : ["260 L : Good for families of 3-5 members", "Smart Inverter Compressor", "3 Star : For Energy savings up to 35%", "Frost Free : Auto fridge defrost to stop ice-build up"]
     },{
         "id" : 5,
         "name" : "Music system - Home Theater",
         "image" : "https://cdn.mos.cms.futurecdn.net/Skf5Q5jtfd2vZzQkifhC9K.jpg",
-        "price" : 7999
+        "price" : 7999,
+        "description": "Etmax INOXE 4.1 Home Theater Speaker System has various input sources like Bluetooth, USB ,FM Radio , AUX-IN and is compatible with your Mobile Phone , Tablets ,PCs ,Television etc. .It comes with 1 Sub-Woofer and 4 Satellite Speakers .It has a wireless remote for ease of use . It has a High Output and crystal clear natural sound. It has attractive black front panel.",
+        "specification" : ["Home Cinema System", "4 Speakers", "1 Subwoofers", "All kinds of audio format playable through AUX, USB, Bluetooth, SD Card"]
     },{
         "id" : 6,
         "name" : "Apple iPhone 13 - Red Color",
         "image" : "https://raatita.com/wp-content/uploads/2022/03/71gm8v4uPBL._SX522_.jpg",
-        "price" : 86750
+        "price" : 86750,
+        "description": "",
+        "specification" : ["128 GB ROM | 128 GB ROM | Expandable Upto 1 TB", "15.49 cm (6.1 inch) Super Retina XDR Display", "12MP + 12MP | 12MP Front Camera", "A15 Bionic Chip Processor", ""]
     }
 ]

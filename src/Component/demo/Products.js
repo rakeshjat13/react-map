@@ -43,16 +43,16 @@ class MyProducts extends React.Component{
                                  {product.price}
                             </TableCell>
                             <TableCell align="left">
-                                {(this.props.cartVal) ? this.props.cartVal.filter((val) => val == product.id ).length : 0}
+                                {(this.props.cartVal) ? this.props.cartVal.filter((val) => val.id == product.id ).length : 0}
                             </TableCell>
                             <TableCell align="left">
-                                {(this.props.cartVal) ? `${ this.props.cartVal.filter((val) => val == product.id ).length * product.price} ` : 0 }
+                                {(this.props.cartVal) ? `${ this.props.cartVal.filter((val) => val.id == product.id ).length * product.price} ` : 0 }
                             </TableCell>
                             <TableCell align="left">
                             <ButtonGroup disableElevation variant="contained" sx={{backgroundColor:'#673ab7'}}>
                                 <Button sx={{fontWeight: 800}} onClick={() => (this.props.cartVal.length > 0) ? this.props.removeToCart(product.id) : alert("You don\'t have any product to remove!")}><RemoveIcon fontSize="small" /></Button>
                                 {/* <Button sx={{fontWeight: 800}} onClick={()=> this.props.addToCart({id:1, image:'./assets/img/apple-iphone-13.jpg', name:'iPhone 11', price:'1100'})}><AddIcon fontSize="small" /></Button> */}
-                                <Button sx={{fontWeight: 800}} onClick={()=> this.props.addToCart(product.id)}><AddIcon fontSize="small" /></Button>
+                                <Button sx={{fontWeight: 800}} onClick={()=> this.props.addToCart(product)}><AddIcon fontSize="small" /></Button>
                             </ButtonGroup>
                             </TableCell>
                         </TableRow>

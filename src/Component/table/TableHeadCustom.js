@@ -1,6 +1,8 @@
 import React from 'react'
 import { TableCell,TableHead, TableRow } from "@mui/material";
-export default function TableHeadCustom(props) {
+
+
+export default React.memo(function(props){
 
     console.log("table header", props);
   return (
@@ -15,4 +17,6 @@ export default function TableHeadCustom(props) {
                 </TableRow>
             </TableHead>
   )
-}
+})
+// export default TableHeadCustom = React.memo(TableHeadCustom1);
+

@@ -14,7 +14,8 @@ export default (state, action) => {
             break;
         case 'remove_to_cart': 
             console.log("remove_to_cart action", action,'---> state ', state)
-            let i = state.cartVal.indexOf(action.productId);
+            // let i = state.cartVal.indexOf(action.productId);
+            let i = state.cartVal.findIndex((v) => v.id == action.productId);
             console.log("product index", i);
             if(i >= 0)
                 state.cartVal.splice(i, 1)
