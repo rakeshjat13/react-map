@@ -18,11 +18,11 @@ const CartDetail = (props) => {
     <List sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper' }}>
     
       {
-        (props.cartVal && props.cartVal.length > 0) ? props.cartVal.map((product) => 
+        (props.cartVal && props.cartVal.length > 0) ? props.cartVal.map((product, i) => 
         <>
-      <ListItem alignItems="flex-start">
-        <ListItemAvatar sx={{minWidth:'191px'}}>
-          <Avatar sx={{ width: 165, height: 165, objectFit:'scale-down'}} alt="Remy Sharp" src={product.image} variant="square" />
+      <ListItem alignItems="flex-start" key={`item-${product.id}`}>
+        <ListItemAvatar sx={{minWidth:'199px'}}>
+          <CardMedia sx={{ width: 165, height: 165, objectFit:'contain', backgroundSize:'contain'}} alt="Remy Sharp" image={product.image} variant="square" />
         </ListItemAvatar>
         <ListItemText
           primary={

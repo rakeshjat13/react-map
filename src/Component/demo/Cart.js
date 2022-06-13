@@ -1,5 +1,5 @@
 import React from "react";
-import {AppBar, Container,Toolbar,Typography,Box,Menu, MenuItem ,Tooltip,IconButton,Button, Avatar, Badge     } from "@mui/material"
+import {AppBar, Container,Toolbar,Typography,Box,Menu, MenuItem ,Tooltip,IconButton,Button, Avatar, Badge, Grid     } from "@mui/material"
 import AdbIcon from '@mui/icons-material/Adb';
 import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -8,6 +8,8 @@ import { connect } from "react-redux";
 import {Link} from "react-router-dom"
 import Header from "./Header";
 import CartDetail from "./CartDetail";
+import CartPrice from "./CartPrice";
+import Footer from "./Footer";
 
 
 
@@ -37,9 +39,20 @@ const Cart = (props) => {
   return (
     <>
       <Header />
-      <Container sx={{marginTop:'45px'}}>
-        <CartDetail />
+      <Container sx={{marginTop:'45px', marginBottom:'40px'}}>
+      <Grid container spacing={2}>
+        <Grid item xs={props.cartVal.length > 0 ? 8 : 12}>
+          <CartDetail />
+        </Grid>
+        {
+          (props.cartVal.length > 0) ?
+          <Grid item xs={4}>
+            <CartPrice />
+          </Grid> : null
+        }
+      </Grid>
       </Container>
+      <Footer />
     </>
   );
 }

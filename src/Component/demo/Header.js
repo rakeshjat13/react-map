@@ -9,7 +9,15 @@ import {Link} from "react-router-dom"
 
 
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = [{'title':'Products',
+                'link': 'demo'},
+                {
+                  'title':'Pricing',
+                  'link':'cart'
+                },{
+                  'title':'Blog',
+                  'link':'#'
+                }];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Cart = (props) => {
@@ -85,8 +93,8 @@ const Cart = (props) => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.title} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page.title}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -113,11 +121,13 @@ const Cart = (props) => {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.title}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                <Link to={`/${page.link}`} style={{textDecoration:'none', color:'white'}}>
+                  {page.title}
+                </Link>
               </Button>
             ))}
           </Box>
