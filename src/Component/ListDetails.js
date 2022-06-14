@@ -46,7 +46,7 @@ function ListDetails (props){
             </Grid>
             <Grid item xs={12} sm={6} md={8} sx={{height:'100vh'}}>
                 {/* <Paper>xs=8</Paper> */}
-                <MyMapComponent LocationArr={[data['state']]} />
+                <MyMapComponent LocationArr={[data['state']]}  marker="active"  />
             </Grid>
         </Grid>
     )
