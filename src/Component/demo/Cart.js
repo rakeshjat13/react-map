@@ -47,7 +47,7 @@ const Cart = (props) => {
         {
           (props.cartVal.length > 0) ?
           <Grid item xs={4}>
-            <CartPrice />
+            <CartPrice data={props.cartVal}/>
           </Grid> : null
         }
       </Grid>
