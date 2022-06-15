@@ -10,6 +10,7 @@ import PComponent from "./Component/Test/PComponent";
 import ReduxDemo from "./Component/Test/ReduxDemo";
 import MemoDemo from "./Component/Test/MemoDemo";
 import PFun from "./Component/Test/PFun";
+import ChatComponent from "./Component/ChatComponent/Main"
 
 export default function Routes(){
     return useRoutes([
@@ -50,6 +51,10 @@ export default function Routes(){
         {
             path:'cart',
             element: <Cart />
+        },
+        {
+            path:'chat',
+            element : <ChatComponent />
         }
     ]);
 }
