@@ -5,3 +5,13 @@ export function scrollToDiv(ref){
 
     // window.scrollTo(0, ele.offsetTop)   
 }
+
+export function getTimeFromDate(timestamp) {
+    var date = new Date(timestamp * 1000);
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+  
+    var time = new Date();
+    return time.setHours(hours, minutes, seconds);
+  }
