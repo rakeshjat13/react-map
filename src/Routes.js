@@ -11,6 +11,11 @@ import ReduxDemo from "./Component/Test/ReduxDemo";
 import MemoDemo from "./Component/Test/MemoDemo";
 import PFun from "./Component/Test/PFun";
 import ChatComponent from "./Component/ChatComponent/Main"
+import Home from "./Component/Admin/Home";
+import User from "./Component/Admin/User";
+import Property from "./Component/Admin/Property";
+import AdminLayout from "./Layouts/Admin/AdminLayout";
+
 
 export default function Routes(){
     return useRoutes([
@@ -41,6 +46,24 @@ export default function Routes(){
                 {
                     path:"purefun",
                     element: <PFun />
+                }
+            ]
+        },
+        {
+            path: 'admin',
+            element: <AdminLayout />,
+            children:[
+                {
+                    path: '',
+                    element: <Home />
+                },
+                {
+                    path: 'users',
+                    element: <User />
+                },
+                {
+                    path: 'property',
+                    element: <Property />
                 }
             ]
         },

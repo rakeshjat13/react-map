@@ -14,4 +14,8 @@ export function getTimeFromDate(timestamp) {
   
     var time = new Date();
     return time.setHours(hours, minutes, seconds);
-  }
+}
+
+export function toCapitalize(str){
+    return str.charAt(0).toUpperCase() + str.slice(1)
+}

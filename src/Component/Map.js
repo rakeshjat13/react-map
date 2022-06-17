@@ -38,20 +38,25 @@ export default function MyMapComponent(props) {
                 markerID:val.id
             });
             // console.log("marker", m);
-            m.addListener("mouseover", (mObj) => {
-                console.log("mobj", mObj);
-                scrollToDiv(`single-${m.detail.id}`)
-                m.setIcon(activeMarkerImg);
-            })
+            if(!props.page){
+                m.addListener("mouseover", (mObj) => {
+                    console.log("mobj", mObj);
+                    scrollToDiv(`single-${m.detail.id}`)
+                    m.setIcon(activeMarkerImg);
+                })
+            }
 
-            m.addListener("mouseout", () => {
-                m.setIcon(deactiveMarkerImg);
-            })
+            if(!props.page){
+                m.addListener("mouseout", () => {
+                    m.setIcon(deactiveMarkerImg);
+                })
+            }
 
             m.addListener("click", (mObj) => {
                 console.log("marker click", mObj);
                 console.log("m", m);
-                navigate('/detail', {state:m.detail});
+                (props.page) ? navigate('/') :
+                navigate('/detail', {state:m.detail})
             })
             bounds.extend(m.getPosition());
         })

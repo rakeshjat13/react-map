@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import "./chatstyles.css";
 import {Paper, Grid, Box, Divider, TextField, Typography, List, ListItem, ListItemIcon, ListItemText, Avatar, Fab, Container, ListItemAvatar} from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
@@ -9,9 +9,9 @@ import { async } from '@firebase/util';
 // var localStorage : Storage;
 async function getChats() {
     const collectionData = collection(db, 'chatbot');
-    // console.log("collection", collectionData);
+    console.log("collection", collectionData);
     const snapshotChat = await getDocs(collectionData);
-    // console.log("snapshotChat", snapshotChat);
+    console.log("snapshotChat", snapshotChat);
     const chatList = snapshotChat.docs.map(doc => doc.data());
     // console.log("chatList", chatList);
     return chatList;
@@ -21,6 +21,7 @@ export default function Main() {
     const [userId, setUserId] = useState(null);
     const [chat, setChat] = useState([])
     const [message, setMessage] = useState('');
+    const messagesEndRef = useRef()
     // const chatdata = getChats().then((res) => res);
     // chatdata.then((res) => {
     //     console.log("chatdatsa --", res)
@@ -31,11 +32,12 @@ export default function Main() {
         if(!userId)
             setUserId(localStorage.getItem('userid'));
         // console.log("chat", chat);
-        // if(!chat || chat.length <= 0)
+        if(!chat || chat.length <= 0)
             getChats().then((res) => {
                 res.sort((a, b) => a.time.seconds - b.time.seconds);
                 // console.log("ress---", res);
                 setChat(res)
+                scrollToBottom()
             })
     })
     // console.log("App", app);
@@ -44,6 +46,10 @@ export default function Main() {
     
     // console.log("ccc", chatdata);
     // console.log('chat', chat);
+    const scrollToBottom = () => {
+        console.log("scrolltobottom", messagesEndRef);
+        messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })
+    }
     const sendMessageHandler = async () => {
         // console.log("send message", message)
         // setChat([...chat, { msg:message, senderId:userId, receiverId: 2 , time:{seconds: Math.floor(new Date().getTime()/1000)}}])
@@ -154,6 +160,7 @@ export default function Main() {
                         </Grid>
                     </Grid>
                 </ListItem> */}
+                <li ref={messagesEndRef} id="bottomDiv"></li>
             </List>
             <Divider />
             <Grid container sx={{padding: '20px'}}>
