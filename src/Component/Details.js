@@ -24,7 +24,7 @@ function Details(props){
                 <CardMedia
                     component="img"
                     height="180"
-                    image={data['marker_image']}
+                    image={'./'+data['marker_image']}
                     alt="green iguana"
                 />
                 <CardContent>

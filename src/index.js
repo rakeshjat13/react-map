@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 
 import reportWebVitals from './reportWebVitals';
@@ -8,13 +8,28 @@ import { Provider } from "react-redux";
 import {BrowserRouter} from "react-router-dom"
 import configRotateStore from "./Component/Redux/Store";
 
-const root = ReactDOM.createRoot(document.getElementById('mymap'));
-root.render(
-  <BrowserRouter>
-  <Provider store={configRotateStore()}>
-    <Routes />
+// const root = ReactDOM.createRoot(document.getElementById('mymap'));
+const root = document.getElementById('mymap');
+console.log("rooot", root)
+ReactDOM.render(
+  <React.StrictMode>
+    <BrowserRouter basename="/test/rbuild/">
+    <Provider store={configRotateStore()}>
+      <Routes />
     </Provider>
-  </BrowserRouter>
+    </BrowserRouter>
+    <>
+        <h4>
+          This is the params which are passed
+          <ul>
+            <li>{(root.dataset && root.dataset.db) ? root.dataset.db : null}</li>
+            <li>{(root.dataset && root.dataset.storecode) ? root.dataset.storecode : null}</li>
+            <li>{(root.dataset && root.dataset.db) ? root.dataset.setting : null}</li>
+          </ul>
+        </h4>
+      </>
+  </React.StrictMode>,
+  root
 );
 
 // If you want to start measuring performance in your app, pass a function

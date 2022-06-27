@@ -38,7 +38,7 @@ function SingleListing(props){
                 {data['marker_image'] ? (<CardMedia
                     component="img"
                     height="180"
-                    image={data['marker_image']}
+                    image={'./'+ data['marker_image']}
                     alt="green iguana"
                 />) : (<Skeleton variant="rectangular" width="100%" height={180} />)}
             

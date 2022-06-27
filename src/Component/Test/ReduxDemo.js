@@ -24,7 +24,7 @@ class App extends Component {
       <div className="App">
         <TestC />
         <header className="App-header">
-          {/* <img src={logo} className={`App-logo ${(this.props.start) ? '': 'App-logo-paused'}`} alt="logo"/> */}
+          <img src={logo} className={`App-logo ${(this.props.start) ? '': 'App-logo-paused'}`} alt="logo"/>
           <div>
             <button onClick={() => this.props.rotateAction(true)}>{(!this.props.start) ? 'Play' : 'Pause'}</button>
             <button onClick={() => this.props.changeBtnStyle(false)}>Paused</button>
