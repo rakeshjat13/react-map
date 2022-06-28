@@ -10,7 +10,7 @@ import configRotateStore from "./Component/Redux/Store";
 
 // const root = ReactDOM.createRoot(document.getElementById('mymap'));
 const root = document.getElementById('mymap');
-console.log("rooot", root)
+console.log("rooot", root);
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter basename='/test/rbuild/'>
