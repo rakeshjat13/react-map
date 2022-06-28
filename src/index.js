@@ -26,6 +26,7 @@ ReactDOM.render(
             <li>{(root.dataset && root.dataset.db) ? root.dataset.setting : null}</li>
             <li><Link to="/test">Test</Link></li>
             <li><Link to="/demo">Demo</Link></li>
+            <li><Link to="/">Home</Link></li>
           </ul>
         </h4>
       </>
