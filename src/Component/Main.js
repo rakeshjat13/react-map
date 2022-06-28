@@ -9,7 +9,7 @@ import LocationArr from "../locations.json";
 
 class Main extends React.PureComponent{
     message = `Truncation should be conditionally applicable on this long line of text
-    as this is a much longer line than what the container can support.`
+    as this is a much longer line than what the container can support. `
 	constructor(){
         console.log("main page called");
         super();
