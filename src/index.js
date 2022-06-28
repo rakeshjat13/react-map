@@ -7,13 +7,18 @@ import Routes from './Routes';
 import { Provider } from "react-redux";
 import {BrowserRouter, Link} from "react-router-dom"
 import configRotateStore from "./Component/Redux/Store";
+import { Post } from './services/Api';
 
 // const root = ReactDOM.createRoot(document.getElementById('mymap'));
 const root = document.getElementById('mymap');
 console.log("rooot", root);
+const url = "https://oc-api-playground.ey.r.appspot.com/locator/";
+const data  = {token: (root.dataset && root.dataset.token) ? root.dataset.token : null}
+Post(url,data).then((res) => console.log("res index", res));
+// console.log("res", res);
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename='/test/rbuild/'>
+    <BrowserRouter>
     <Provider store={configRotateStore()}>
       <Routes />
     </Provider>
@@ -23,7 +28,8 @@ ReactDOM.render(
           <ul>
             <li>{(root.dataset && root.dataset.db) ? root.dataset.db : null}</li>
             <li>{(root.dataset && root.dataset.storecode) ? root.dataset.storecode : null}</li>
-            <li>{(root.dataset && root.dataset.db) ? root.dataset.setting : null}</li>
+            <li>{(root.dataset && root.dataset.setting) ? root.dataset.setting : null}</li>
+            <li>{(root.dataset && root.dataset.token) ? root.dataset.token : null}</li>
             <li><Link to="/test">Test</Link></li>
             <li><Link to="/demo">Demo</Link></li>
             <li><Link to="/">Home</Link></li>

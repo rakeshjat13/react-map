@@ -60,7 +60,7 @@ class MyMapComponent extends React.Component{
             // console.log("marker", m);
             if(!this.props.page){
                 m.addListener("mouseover", (mObj) => {
-                    console.log("mobj", mObj);
+                    // console.log("mobj", mObj);
                     scrollToDiv(`single-${m.detail.id}`)
                     m.setIcon(activeMarkerImg);
                 })
